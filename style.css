@@ -5,6 +5,7 @@
   --secondary-color: #cba951;
   --button-color1: #cba951;
   --button-color2: #135caa;
+  --light-color: #fff;
 }
 
 * {
@@ -47,6 +48,10 @@ section {
 
 .pt-0 {
   padding-top: 0;
+}
+
+.pb-0 {
+  padding-bottom: 0;
 }
 
 .column {
@@ -322,14 +327,14 @@ ul.sub-menu li {
   text-transform: uppercase;
 }
 
-.hero-right-text h3 {
+.section-heading {
   font-size: 40px;
   text-transform: uppercase;
   color: var(--primary-color);
   margin-bottom: 25px;
 }
 
-.hero-right-text p {
+.section-desc {
   font-size: 16px;
   line-height: 22px;
   color: #555;
@@ -344,6 +349,311 @@ ul.sub-menu li {
   border-radius: 5px;
   font-size: 16px;
   text-transform: uppercase;
+}
+
+.welcoming-patients-section .column-10 {
+  background-color: #135caa;
+  padding: 80px 0;
+  color: var(--light-color);
+  border-radius: 8px;
+  padding-inline: 40px;
+}
+
+.welcoming-patients-section .column-10 .section-heading {
+  color: var(--light-color);
+  margin-bottom: 0;
+}
+
+.welcoming-patients-section .column-10 .section-desc {
+  color: var(--light-color);
+}
+
+.btns-grp .btn:nth-child(1) {
+  margin-right: 15px;
+}
+
+.our-speciality {
+  background: linear-gradient(1deg, #56bce44a, white);
+}
+
+.speciality-box {
+  border: 1px solid var(--primary-color);
+  position: relative;
+  text-align: center;
+  border-radius: 5px;
+  padding: 30px;
+  background-color: #fff;
+  padding-top: 60px !important;
+  min-height: 340px;
+}
+
+.speciality-icon-container {
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--primary-color);
+  position: absolute;
+  top: -48px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  background-color: #fff;
+}
+
+.speciality-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-inline: auto;
+  margin-block: 8px;
+  background-color: #f7f6f1;
+}
+
+.speciality-icon img {
+  border-radius: 50px;
+  border: 1px solid #cba951;
+  display: block;
+  margin-inline: auto;
+}
+
+.speciality-desc h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.speciality-box .section-desc {
+  padding-bottom: 60px;
+}
+
+.our-speciality .row {
+  margin: 100px 0;
+}
+
+.invisalign-section {
+  padding: 125px 0;
+  background-image: url(assets/images/invisalign-bg.jpg);
+  background-color: #00000050;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: color;
+  min-height: 500px;
+  background-attachment: fixed;
+}
+
+.invisalign-section .section-heading {
+  color: #fff;
+  font-weight: 500;
+}
+
+.invisalign.logo-container img {
+  max-width: 200px;
+  margin-bottom: 30px;
+}
+
+.invisalign-section .btn {
+  background-color: #fff;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  padding-inline: 30px;
+}
+
+.doc-image-container img {
+  border-radius: 8px;
+  max-height: 550px;
+}
+
+.meet-the-doc-section .row {
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+.meet-the-doc-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.meet-the-doc-section .column-6 {
+  display: flex;
+  height: 550px;
+  color: #fff;
+  background-image: url(assets/images/doc-bg.jpg);
+  background-color: #00000080;
+  background-blend-mode: color;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+
+.meet-the-doc-section .column-6 .section-desc {
+  color: #fff;
+}
+
+.meet-the-doc-right h3 {
+  font-size: 30px;
+}
+
+.why-us-box {
+  width: 100%;
+  max-width: 420px;
+  min-height: 120px;
+  border: 2px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  margin: 30px auto;
+  gap: 30px;
+}
+
+.why-us-box {
+  width: 100%;
+  max-width: 420px;
+  min-height: 120px;
+  border: 2px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  margin: 30px auto;
+}
+
+.why-us-icon-container p {
+  position: absolute;
+  top: 10px;
+  z-index: 1;
+  left: 13px;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-color);
+  border-radius: 100%;
+  color: #fff;
+  line-height: 60px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.why-us-box-desc .why-us-box {
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 500;
+}
+
+.star-ratings i {
+  color: #ffd102;
+}
+
+.review-item {
+  background-color: #fff;
+  position: relative;
+  border-radius: 8px;
+  padding-inline: 15px;
+  min-height: 280px;
+  min-width: 420px;
+  padding-top: 45px;
+  color: var(--primary-color);
+  margin-inline: 15px;
+}
+
+.reviews-section {
+  background-image: url(assets/images/reviews-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: #00000080;
+  background-blend-mode: darken;
+  padding: 150px 0;
+}
+
+.reviews-section .section-heading,
+.reviews-section .section-desc {
+  color: #fff;
+}
+
+.reviews-container {
+  margin-top: 80px;
+}
+
+.google-icon img {
+  max-height: 40px;
+  margin-bottom: 10px;
+  margin-inline: auto;
+}
+
+.user-icon {
+  color: #fff;
+  background-color: var(--primary-color);
+  font-size: 35px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -25px;
+}
+
+.user-name p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.review-data p {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.instagram-img-container {
+  margin-top: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 12px 24px; /* Adjust the padding to add more space */
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+td:first-child {
+  padding-right: 50px; /* Add extra space between the day and time */
+}
+
+.footer-main {
+  padding: 40px 0;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.footer-logo img {
+  border-radius: 8px;
+}
+
+.footer-top .row {
+  border-bottom: 1px solid;
+  border-color: var(--secondary-color);
+  padding-bottom: 30px;
 }
 
 /*---------------------------------------------------
