@@ -164,9 +164,10 @@ section {
 
 .site-logo img {
   max-width: 250px;
-  max-height: 150px !important;
+  width: 100%;
+  height: auto;
   object-fit: contain;
-  margin: 5px 0;
+  margin-block: 5px;
 }
 
 .nav-btns {
@@ -179,7 +180,7 @@ section {
 
 .header-top .container {
   display: flex;
-  align-items: end;
+  align-items: center;
   justify-content: space-between;
   margin: 0 auto;
 }
@@ -194,9 +195,14 @@ section {
 
 .header-btn {
   border-radius: 5px;
-  background: var(--primary-color);
+  background-color: var(--button-color2);
   padding: 7px 12px;
   color: #fff;
+  transition: all 0.2s ease-in;
+}
+
+.header-btn:hover {
+  background-color: var(--button-color1);
 }
 
 .appoinment-btns a:nth-child(2) {
@@ -240,8 +246,10 @@ nav.main-navigation ul > li:hover .sub-menu {
   padding: 0;
   list-style: none;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  max-width: 333px;
+  max-width: 250px;
+  padding: 15px;
   border-radius: 5px;
+  padding-top: 40px;
 }
 
 ul.sub-menu li a {
@@ -252,6 +260,7 @@ ul.sub-menu li a {
 ul.sub-menu li {
   position: relative;
   min-width: 200px;
+  margin-bottom: 25px;
 }
 
 .header-main {
@@ -260,6 +269,62 @@ ul.sub-menu li {
 
 .header-top {
   padding: 10px 0;
+}
+
+.main-navigation ul li span {
+  margin-left: 5px;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  outline: none;
+}
+
+.hamburger-icon {
+  width: 25px;
+  height: 2px;
+  background-color: var(--primary-color);
+  display: block;
+  position: relative;
+  transition: background 0.3s ease-in-out;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-icon::before {
+  top: -8px;
+}
+
+.hamburger-icon::after {
+  bottom: -8px;
+}
+
+/* Active Hamburger Menu */
+.hamburger.active .hamburger-icon {
+  background: transparent;
+}
+
+.hamburger.active .hamburger-icon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.hamburger.active .hamburger-icon::after {
+  transform: rotate(-45deg);
+  bottom: 0;
 }
 
 .banner-top-bar h3 img {
@@ -284,8 +349,10 @@ ul.sub-menu li {
 
 .banner-top-bar h3 {
   margin-bottom: 0;
-  font-size: 16px !important;
-  color: #fff !important;
+  font-size: 18px;
+  color: #fff;
+  display: flex;
+  gap: 5px;
 }
 
 .banner-top-bar p {
@@ -311,7 +378,7 @@ ul.sub-menu li {
 
 .banner-text h2 {
   color: #fff;
-  font-size: 40px;
+  font-size: 70px;
   font-weight: 600;
 }
 
@@ -325,6 +392,13 @@ ul.sub-menu li {
   margin-top: 20px;
   font-size: 16px;
   text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.banner-text .btn:hover {
+  background-color: var(--button-color1);
+  color: #fff;
 }
 
 .section-heading {
@@ -349,14 +423,34 @@ ul.sub-menu li {
   border-radius: 5px;
   font-size: 16px;
   text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--button-color2);
+}
+
+.btns-grp .btn:hover,
+.footer-main .btn:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+}
+
+.hero-left-img img {
+  min-height: 450px;
+  object-fit: cover;
 }
 
 .welcoming-patients-section .column-10 {
   background-color: #135caa;
   padding: 80px 0;
   color: var(--light-color);
-  border-radius: 8px;
+  border-radius: 15px;
   padding-inline: 40px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .welcoming-patients-section .column-10 .section-heading {
@@ -366,6 +460,8 @@ ul.sub-menu li {
 
 .welcoming-patients-section .column-10 .section-desc {
   color: var(--light-color);
+  max-width: 850px;
+  margin-inline: auto;
 }
 
 .btns-grp .btn:nth-child(1) {
@@ -385,6 +481,7 @@ ul.sub-menu li {
   background-color: #fff;
   padding-top: 60px !important;
   min-height: 340px;
+  height: 100%;
 }
 
 .speciality-icon-container {
@@ -457,11 +554,20 @@ ul.sub-menu li {
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
   padding-inline: 30px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.invisalign-section .btn:hover {
+  background-color: var(--button-color1);
+  border-color: var(--button-color1);
+  color: #fff;
 }
 
 .doc-image-container img {
-  border-radius: 8px;
-  max-height: 550px;
+  border-radius: 15px;
+  min-height: 550px;
+  object-fit: cover;
 }
 
 .meet-the-doc-section .row {
@@ -485,15 +591,17 @@ ul.sub-menu li {
   background-blend-mode: color;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 8px;
+  border-radius: 15px;
 }
 
 .meet-the-doc-section .column-6 .section-desc {
   color: #fff;
+  margin-top: 0;
 }
 
 .meet-the-doc-right h3 {
   font-size: 30px;
+  margin-bottom: 20px;
 }
 
 .why-us-box {
@@ -525,9 +633,9 @@ ul.sub-menu li {
 
 .why-us-icon-container p {
   position: absolute;
-  top: 10px;
+  top: 0;
   z-index: 1;
-  left: 13px;
+  left: 0;
   right: 0;
   width: 60px;
   height: 60px;
@@ -618,18 +726,19 @@ ul.sub-menu li {
 
 .instagram-img-container {
   margin-top: 20px;
+  overflow: hidden;
 }
 
 table {
   border-collapse: collapse;
   width: 100%;
+  max-width: 450px;
 }
 
 th,
 td {
-  padding: 12px 24px; /* Adjust the padding to add more space */
+  padding: 12px 0;
   text-align: left;
-  border: 1px solid #ccc;
 }
 
 th {
@@ -654,6 +763,64 @@ td:first-child {
   border-bottom: 1px solid;
   border-color: var(--secondary-color);
   padding-bottom: 30px;
+  align-items: center;
+}
+
+.contact-box-address b,
+.office-hours h4 {
+  font-size: 30px;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.contact-box-address p,
+.contact-box-email p,
+.contact-box-phone p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.contact-box-address a,
+.contact-box-email a,
+.contact-box-phone a {
+  color: var(--primary-color);
+}
+
+.links ul {
+  list-style: none;
+}
+
+.links ul li {
+  margin-bottom: 15px;
+}
+
+.footer-timings p {
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  font-size: 18px;
+}
+
+.footer-bottom-links {
+  padding-top: 30px;
+}
+
+.instagram-img-container:hover img {
+  transform: scale(1.2);
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+
+.footer-logo {
+  text-align: center;
 }
 
 /*---------------------------------------------------
@@ -666,6 +833,92 @@ td:first-child {
   }
 }
 
+/* Responsive Styles */
+
+@media (max-width: 1600px) {
+  .banner-text {
+    padding: 250px 0;
+  }
+  .our-speciality .row {
+    margin: 80px 0;
+  }
+}
+
+@media (max-width: 1116px) {
+  .nav-btns {
+    display: none;
+  }
+  .header-top-right {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none; /* Initially hidden */
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .main-navigation ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-top-right.active {
+    display: flex; /* Show when active */
+  }
+
+  .main-navigation ul {
+    width: 100%;
+    text-align: left;
+  }
+
+  .main-navigation ul li {
+    width: 100%;
+  }
+
+  .sub-menu {
+    position: static;
+    box-shadow: none;
+  }
+
+  .sub-menu li {
+    width: 100%;
+  }
+
+  .header-top-right.active nav.main-navigation {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    width: 80%;
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 90%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .hamburger {
+    position: absolute;
+    right: 20px;
+  }
+  .main-navigation ul li {
+    width: 100%;
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 35px;
+    text-align: center;
+  }
+  nav.main-navigation ul > li:hover .sub-menu {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+}
+
 @media (max-width: 767.98px) {
   .column {
     flex: 0 0 100% !important;
@@ -674,5 +927,57 @@ td:first-child {
 
   .header-top-right {
     display: none;
+  }
+
+  .hero-left-img img {
+    margin-bottom: 30px;
+  }
+
+  .welcoming-patients-section .column-10 {
+    flex: 0 0 82% !important;
+  }
+  .speciality-box {
+    max-width: 450px;
+    margin-inline: auto;
+    height: auto;
+    margin-bottom: 90px;
+  }
+  .our-speciality .row {
+    margin-bottom: 0;
+  }
+
+  .meet-the-doc-section .column-6 {
+    flex: 0 0 92% !important;
+    margin-top: 20px;
+  }
+  .footer-logo {
+    margin: 40px 0;
+  }
+  .footer-bottom-links .text-left,
+  .footer-bottom-links .text-right {
+    text-align: center;
+  }
+  .footer-bottom-link {
+    margin-bottom: 15px;
+  }
+  .instagram-img-container img {
+    width: 100%;
+  }
+  .office-hours {
+    margin: 30px 0;
+  }
+  section.our-speciality,
+  section.what-sets-us-apart-section,
+  section.visit-us-section {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 649px) {
+  .banner-text {
+    padding: 180px 0;
+  }
+  .btns-grp .btn:nth-child(1) {
+    margin-bottom: 15px;
   }
 }
