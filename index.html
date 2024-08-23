@@ -620,7 +620,7 @@
           </div>
         </div>
       </section>
-      <section class="visit-us-section">
+      <section class="visit-us-section pt-0">
         <div class="container">
           <div class="row align-middle">
             <div class="column column-6">
@@ -797,28 +797,25 @@
           slidesToScroll: 3,
           autoplay: true,
           autoplaySpeed: 2000,
+          prevArrow:
+            '<span class="slider_prev_arrow"><i class="fa fa-angle-left"></i></span>',
+          nextArrow:
+            '<span class="slider_next_arrow"><i class="fa fa-angle-right"></i></span>',
           responsive: [
             {
-              breakpoint: 1024,
+              breakpoint: 1268,
               settings: {
-                slidesToShow: 3,
+                slidesToShow: 1,
                 slidesToScroll: 3,
                 infinite: true,
-                dots: true,
+                dots: false,
               },
             },
             {
               breakpoint: 600,
               settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-              },
-            },
-            {
-              breakpoint: 480,
-              settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1,
+                slidesToScroll: 2,
               },
             },
           ],
