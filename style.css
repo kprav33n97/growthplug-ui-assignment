@@ -945,6 +945,61 @@ td:first-child {
   color: var(--secondary-color);
 }
 
+/* .popup {
+  display: none;
+  position: fixed;
+  padding: 10px;
+  width: 480px;
+  height: 380px;
+  left: 50%;
+  margin-left: -150px;
+  top: 50%;
+  margin-top: -100px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 3px solid #f04a49;
+  z-index: 20;
+}
+
+#popup:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -2;
+}
+
+#popup:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--primary-color);
+  z-index: -1;
+}
+
+.popup p {
+  color: #fff;
+}
+
+p.popup-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+}
+
+a.close-popup {
+  color: #000;
+  font-weight: bold;
+} */
+
 /*---------------------------------------------------
 ##   Responsive
 *   ----------------------------------------------------- */
